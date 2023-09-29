@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="{{ url_for('views.themes', path='css/fonts.css') }}">
 	<link rel="stylesheet" href="{{ url_for('views.themes', path='css/main.css') }}">
 	<link rel="stylesheet" href="{{ url_for('views.themes', path='css/core.css') }}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+
 	{% block stylesheets %}
 	{% endblock %}
 
@@ -36,11 +38,13 @@
 		{% block content %}
 		{% endblock %}
 	</main>
-
+	<div  class="img-bg">
+		<!-- <img src="../static/fonts/home-page-logo.svg"> -->
+	</div>
 	<footer class="footer">
 		<div class="container text-center">
 			<a href="https://ctfd.io" class="text-secondary">
-				<small class="text-muted">Powered by CTFd</small>
+				<small class="text-muted">Made by WDC - 1337 Web development Club</small>
 			</a>
 		</div>
 	</footer>

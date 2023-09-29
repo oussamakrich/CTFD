@@ -2,3 +2,18 @@
 main {
   padding-top: 3.5rem;
 }
+
+.container{
+  transform: translateY(50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row{
+  background-color: #ED1C2492 !important;
+
+}
+.img-bg{
+  /* display: none; */
+}

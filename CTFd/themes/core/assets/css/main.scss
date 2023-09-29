@@ -6,12 +6,37 @@
 @import "includes/flag-icons.scss";
 @import "includes/utils/opacity.scss";
 @import "includes/utils/min-height.scss";
+// import font Chakra Petch
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&display=swap');
+
+body{
+  background-repeat: no-repeat;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("../img/background.svg");
+  background-size: cover;
+  background-position: center center;
+}
 
 html,
 body,
 .container {
-  font-family: "Lato", "LatoOffline", sans-serif;
+  // font-family: "Lato", "LatoOffline", sans-serif;
+  font-family: 'Chakra Petch', sans-serif;
 }
+
+.img-bg{
+
+  // transform: translateX(-10%);
+  transform: translateY(25%);
+
+  width: 100%;
+  height: 50vh;
+  background-size: 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("../img/home-page-logo.svg");
+}
+
 
 h1,
 h2 {
@@ -152,4 +177,68 @@ blockquote {
   vertical-align: top;
   margin-left: -1.5em;
   font-size: 50%;
+}
+
+
+// custom css----------------
+
+
+.navbar-dark .navbar-nav a.nav-link {
+  color: #ece5e5; 
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.container .pad .nav-item{
+  padding-left: 100px;
+
+}
+
+.black-font {
+  color: #010101;
+
+}
+
+.text-muted{
+  color: #fff !important;
+  // font-size: 12px;
+  font-weight: 600;
+}
+
+.register-login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #D9D9D9;
+  color: #010101 !important;
+  text-align: center;
+  width: 156px;
+  height: 56px;
+  margin: 10px;
+  clip-path: polygon(0% 20%, 10% 0%, 100% 0%, 100% 80%, 90% 100%, 0% 100%);
+  border :2px solid #d46767;
+}
+
+// .pad{
+//   padding: 0 100px;
+// }
+
+#base-navbars{
+  display: flex !important;
+  justify-content: space-between;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 95% !important;
+  }
+}
+
+button {
+  border: 0;
+  height: 50px;
+  background: black;
+  color: white;
+  padding: 0px 15px;
+  clip-path: polygon(0% 10%, 10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%);
 }
