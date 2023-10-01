@@ -11,7 +11,7 @@
 
 body{
   background-repeat: no-repeat;
-  background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.753)),
   url("../img/background.svg");
   background-size: cover;
   background-position: center center;
@@ -216,7 +216,8 @@ blockquote {
   height: 56px;
   margin: 10px;
   clip-path: polygon(0% 20%, 10% 0%, 100% 0%, 100% 80%, 90% 100%, 0% 100%);
-  border :2px solid #d46767;
+  // border :2px solid #d46767;
+  box-shadow:  10px 5px 5px red !important;
 }
 
 // .pad{
@@ -241,4 +242,8 @@ button {
   color: white;
   padding: 0px 15px;
   clip-path: polygon(0% 10%, 10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%);
+}
+
+.nav-link:hover{
+  color: red !important;
 }

@@ -9,9 +9,9 @@
 		<h1>Teams</h1>
 	</div>
 </div>
-<div class="container">
+<div class="container mx-auto">
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-12 mask-bg">
 			{% if q and field %}
 			<h5 class="text-muted text-center">
 				Searching for teams with <strong>{{ field }}</strong> matching <strong>{{ q }}</strong>
@@ -22,26 +22,27 @@
 			{% endif %}
 
 			{% with form = Forms.teams.PublicTeamSearchForm(field=field, q=q) %}
-			<form method="GET" class="form-inline">
+			<form method="GET" class="form-inline mask-bg rltv">
 				<div class="form-group col-md-2">
 					{{ form.field(class="form-control custom-select w-100") }}
+					<div class="abs"></div>
 				</div>
-				<div class="form-group col-md-8">
+				<div class="form-group col-md-10">
 					{{ form.q(class="form-control w-100", placeholder="Search for matching teams") }}
 				</div>
-				<div class="form-group col-md-2">
+				<!-- <div class="form-group col-md-2">
 					<button type="submit" class="btn btn-primary w-100">
 						<i class="fas fa-search" aria-hidden="true"></i>
 					</button>
-				</div>
+				</div> -->
 			</form>
 			{% endwith %}
 		</div>
 	</div>
 
-	<hr>
+	<!-- <hr> -->
 
-	<div class="row">
+	<div class="row users-bg">
 		<div class="col-md-12">
 			<table class="table table-striped">
 				<thead>
