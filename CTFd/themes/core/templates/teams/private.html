@@ -239,14 +239,17 @@
 			</div>
 		</div>
 	</div>
-	<div class="container">
+	<div class="container mx-auto">
 		{% include "components/errors.html" %}
 
 		<br>
-
-		<div class="row min-vh-25">
+		<div class="row">
+			<div class="col-md-12 mask-bg text-center">
+				<h3 style="color: white;">Members</h3>
+			</div>
+		</div>
+		<div class="row users-bg">
 			<div class="col-md-12">
-				<h3>Members</h3>
 				<table class="table table-striped">
 					<thead>
 					<tr>
@@ -274,7 +277,7 @@
 		</div>
 
 		{% if solves or awards %}
-			<div class="row">
+			<div class="row statistic">
 				<div class="col-md-6 d-none d-md-block d-lg-block">
 					<div id="keys-pie-graph" class="d-flex align-items-center">
 						<div class="text-center w-100">
@@ -322,10 +325,14 @@
 
 				<br>
 			{% endif %}
-
-			<div class="row">
-				<div class="col-md-12">
-					<h3>Solves</h3>
+			
+			<div class="row ">
+				<div class="col-md-12 mask-bg text-center">
+					<h3 style="color: white;">Solves</h3>
+				</div>
+			</div>
+			<div class="row users-bg">
+				<div class="col-md-12 ">
 					<table class="table table-striped">
 						<thead>
 						<tr>
@@ -356,7 +363,7 @@
 			</div>
 		{% else %}
 			<div class="row min-vh-25">
-				<h3 class="opacity-50 text-center w-100 justify-content-center align-self-center">
+				<h3 style="color: white;" class="opacity-50 text-center w-100 justify-content-center align-self-center">
 					No solves yet
 				</h3>
 			</div>

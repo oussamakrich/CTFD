@@ -9,9 +9,15 @@
 		<h1>Register</h1>
 	</div>
 </div> -->
-<div class="container center">
-	<div class="row row-bg2">
-		<div class="col-md-6 offset-md-3">
+<div class="container mx-auto">
+	<div class="row mx-auto">
+		<svg class="svg-path" width="802" height="702" style="position: relative; z-index: 2; top: 0;left: 0;stroke: red;stroke-width: 1px;fill: none;  pointer-events: none;">
+			<g transform="translate(1, 1)">
+				<path d="M0 30 ,24 0, 800 0, 800 700, 800 700 , 0 700z" fill="none" />	
+				</g>
+		</svg>	
+	
+		<div class="offset-md-3 mx-auto  row-bg2 " style="position: absolute;z-index:1;padding-left:52px;">
 			{% include "components/errors.html" %}
 
 			{% if integrations.mlc() %}
@@ -55,7 +61,7 @@
 
 				<div class="center">
 					<div class="col-md-6">
-						{{ form.submit(class="btn btn-md btn-primary btn-outlined float-right") }}
+						{{ form.submit(class="rg-btn btn btn-md btn-primary btn-outlined mx-auto") }}
 					</div>
 				</div>
 

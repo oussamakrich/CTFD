@@ -68,13 +68,13 @@
 			</div>
 		</div>
 	</div>
-	<div class="container">
+	<div class="container mx-auto">
 		{% include "components/errors.html" %}
 
 		{% set solves = user.solves %}
 		{% set awards = user.awards %}
 		{% if solves or awards %}
-			<div class="row">
+			<div class="row statistic">
 				<div class="col-md-6 d-none d-md-block d-lg-block">
 					<div id="keys-pie-graph" class="d-flex align-items-center">
 						<div class="text-center w-100">
@@ -102,8 +102,8 @@
 			<div class="clearfix"></div>
 
 			<div class="row">
-				<div class="col-md-12">
-					<h3>Awards</h3>
+				<div class="col-md-12 text-center">
+					<h3 style="color: white;">Awards</h3>
 				</div>
 				{% for award in awards %}
 					<div class="col-md-3 col-sm-6">
@@ -120,15 +120,18 @@
 			</div>
 
 			<br>
-
 			<div class="row">
+				<div class="col-md-12 mask-bg text-center">
+					<h3 style="color: white;">Solves</h3>
+				</div>
+			</div>
+			<div class="row users-bg">
 				<div class="col-md-12">
-					<h3>Solves</h3>
 					<table class="table table-striped">
 						<thead>
 						<tr>
 							<td><b>Challenge</b></td>
-							<td class="d-none d-md-block d-lg-block"><b>Category</b></td>
+							<td class="d-none d-md-block d-lg-block "><b>Category</b></td>
 							<td><b>Value</b></td>
 							<td><b>Time</b></td>
 						</tr>

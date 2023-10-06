@@ -17,19 +17,18 @@ main {
   max-width: 1024px !important;
   width: 90%;
 }
-.row{
+ .row{
   margin-top: 10%;
 }
-.row-bg{
+/*.row-bg{
   display: flex !important;
   align-items: center !important;
   background-color: #ed1c2344 !important;
-  border : 1px solid red;
   backdrop-filter: blur(5px);
-  width: 950px;
+  width: 90%;
   height: 500px;
   clip-path: polygon(0% 5%, 3% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%);
-}
+} */
 
 .center{
   display: flex;
@@ -66,6 +65,7 @@ main {
   color: #fff;
   
 }
+/* //<path d="M 1 0 L 10 0 L 10 10 L 0 10 L 0 1 L 1 0" stroke="red" width=2/> */
 
 #q{
   background-color: transparent;
@@ -76,14 +76,15 @@ main {
 
 }
 
-.btn-primary{
+.rg-btn{
   clip-path: polygon(0% 20%, 5% 0%, 100% 0%, 100% 80%, 95% 100%, 0% 100%);
-  width: 420px;
-  height: 50px;
-  margin-bottom: -10px !important;
+  /* width: 420px; */
+  /* height: 50px; */
+  /* margin-bottom: -10px !important; */
   background-color: #D9D9D9 !important;
   color: #010101 !important;
   border: none !important;
+  width: 100%;
 }
 .row .pt-3 {
   justify-content: center !important;
@@ -91,9 +92,11 @@ main {
 form div.form-group {
   padding: 0;
 }
+
 .row-bg form{
-  width: 200%;
+  /* width: 200%; */
 }
+
 .form-group{
   font-family: 'Chakra Petch', sans-serif !important;
   color: #fff;
@@ -101,7 +104,7 @@ form div.form-group {
 .form-group input{
   background-color: #500104db;
   border: 1px solid red;
-  width: 90% !important;
+  /* width: 90% !important; */
 }
 .form-group label{
   color: #ED1C24;
@@ -128,19 +131,26 @@ form div.form-group {
   margin-bottom: 50px;
 }
 
-.row-bg2{
+ .row-bg2{
   display: flex !important;
   align-items: center !important;
   background-color: #ed1c2344 !important;
-  border : 1px solid red;
   backdrop-filter: blur(5px);
-  width: 950px;
+  max-width: 90%;
   height: 700px;
+  width: 800px;
+  position: relative;
   clip-path: polygon(0% 5%, 3% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%);
+} 
+
+
+
+
+.px-auto{
+  padding: auto;
 }
- 
 .row-bg2 form{
-  width: 200%;
+  width: 90%;
 }
 /* Rgister --- style */
 
@@ -223,4 +233,186 @@ tbody td a {
 
 tbody td span {
   color: white;
+}
+.forbid h1{
+  color: red;
+  font-family: 'Chakra Petch', sans-serif;
+}
+.forbid h2{
+  font-family: 'Chakra Petch', sans-serif;
+  color: white;
+}
+
+.polygon .btn{
+  opacity: 1;
+  
+  height: 150px;
+  min-width: 100px;
+
+  /* max-width: 250px; */
+  font-size: 20px;
+  background-color: #EF333ABF;
+
+  clip-path: polygon(
+    5% 0%,
+    60% 0%,
+    62% 2%,
+    80% 2%,
+    82% 0%,
+    95% 0%,
+    100% 5%,
+    100% 95%,
+    95% 100%,
+    80% 100%,
+    78% 97%,
+    25% 97%,
+    23% 100%,
+    5% 100%,
+    0% 95%,
+    0% 50%,
+    2% 47%,
+    2% 23%,
+    0% 20%,
+    0% 5%,
+    5% 0%
+    ) !important;
+}
+
+.polygon1{
+  opacity: 1;
+  font-size: 20px;
+  background-color: rgba(237,28,35,.27) !important;
+  backdrop-filter: blur(5px); 
+  color: #fff;
+  clip-path: polygon(
+      5% 0%,
+      60% 0%,
+      62% 2%,
+      80% 2%,
+      82% 0%,
+      95% 0%,
+      100% 5%,
+      100% 95%,
+      95% 100%,
+      80% 100%,
+      78% 97%,
+      25% 97%,
+      23% 100%,
+      5% 100%,
+      0% 95%,
+      0% 50%,
+      2% 47%,
+      2% 23%,
+      0% 20%,
+      0% 5%,
+      5% 0%
+      ) !important;
+      position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  fill: transparent;
+  width: 500px;
+  height: 500px;
+  }
+
+
+
+
+
+
+
+
+
+.close{
+  color: red !important;
+  text-shadow: none !important;
+}
+
+.solved-challenge.btn {
+  background-color: #A32328BF !important;
+}
+
+.category-header h3 {
+  color: #fff;
+
+}
+.w-1500 {
+  max-width: 1500px;
+}
+
+.search-result {
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+  text-align: center;
+
+}
+
+.nav-link.white {
+  color: red !important;
+  /* background-color: red !important; */
+  border: none !important;
+}
+
+.nav-link.active {
+  color: white !important;
+  background-color: red !important;
+  /* border: none !important; */
+  border-bottom: 1px solid red !important;
+} 
+.nav-tabs{
+  border-bottom: 1px solid red !important;
+}
+.form-group input::placeholder{
+  color: white !important;
+}
+
+.challenge-submit {
+  color: white !important;
+  background-color: transparent !important;
+  border: 1px solid white !important;
+}
+
+.challenge-submit:hover {
+  color: black !important;
+  background-color: white !important;
+  border: 1px solid white !important;
+}
+
+.members-bg{
+  background-color: #6A6B6E;
+  clip-path: polygon(0 15%,1% 0, 99% 0,100% 10%,100% 100%,100% 100%,0 100%);
+  /* padding: 0; */
+  width: 100%;
+}
+.table{
+  color: white !important;
+}
+
+/* -----------------SOS----------------- */
+
+.alert{
+  padding: .3em !important;
+}
+
+@media  screen and (max-width: 900px) {
+  .svg-path {
+    display: none;
+ }
+}
+
+@media  screen and (max-width: 700px) {
+  .svg-challenge {
+    display: none;
+ }
+ .polygon1{
+    clip-path: none !important;
+    border: 1px solid red !important;
+ }
+}
+.statistic{
+  background-color: #fff;
+  padding-top: 20px;
+  border: 2px solid red;
 }

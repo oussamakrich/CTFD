@@ -248,7 +248,7 @@ function markSolves() {
     if (challenge.solved_by_me) {
       const btn = $(`button[value="${challenge.id}"]`);
       btn.addClass("solved-challenge");
-      btn.prepend("<i class='fas fa-check corner-button-check'></i>");
+      // btn.prepend("<i class='fas fa-check corner-button-check'></i>"); // HINT: Cheked mark removed.
     }
   });
 }
@@ -282,12 +282,13 @@ function loadChals() {
     const $challenges_board = $("#challenges-board");
     challenges = response.data;
 
+
     if (window.BETA_sortChallenges) {
       challenges = window.BETA_sortChallenges(challenges);
     }
 
     $challenges_board.empty();
-
+    $challenges_board.addClass("w-1500");
     for (let i = challenges.length - 1; i >= 0; i--) {
       if ($.inArray(challenges[i].category, categories) == -1) {
         const category = challenges[i].category;
@@ -300,7 +301,7 @@ function loadChals() {
             '<div class="category-header col-md-12 mb-3">' +
             "</div>" +
             '<div class="category-challenges col-md-12">' +
-            '<div class="challenges-row col-md-12"></div>' +
+            '<div class="challenges-row polygon col-md-12"></div>' +
             "</div>" +
             "</div>"
         );

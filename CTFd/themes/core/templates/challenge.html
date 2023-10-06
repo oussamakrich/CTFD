@@ -1,16 +1,21 @@
 <div class="modal-dialog" role="document">
-	<div class="modal-content">
+	<svg  class="svg-challenge" viewBox="0 0 102 102" xmlns="http://www.w3.org/2000/svg" style="position: relative; z-index: 2; top: 0;left: 0;stroke: red;stroke-width: 0.5px;fill: none;">
+		<g transform="translate(1, 1)">
+		  <path style=" stroke: red; stroke-width: 0.5px; fill: none;" stroke-linecap="butt" d="M5 0,60 0,62 2,80 2,82 0,95 0,100 5,100 95,95 100,80 100,78 97,25 97,23 100,5 100,0 95,0 50,2 47,2 23,0 20,0 5,5 0z"></path>
+		</g>
+	  </svg>
+	<div class="modal-content polygon1" style="position: absolute;z-index: 1; transform: scale(0.98,0.98);">
 		<div class="modal-body">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				<span aria-hidden="true">&times;</span>
 			</button>
 			<ul class="nav nav-tabs">
 				<li class="nav-item">
-					<a class="nav-link active" href="#challenge">Challenge</a>
+					<a class="nav-link active white" href="#challenge">Challenge</a>
 				</li>
 				{% block solves %}
 					<li class="nav-item">
-						<a class="nav-link challenge-solves" href="#solves">
+						<a class="nav-link challenge-solves white" href="#solves">
 							{% if solves != None %}
 								{{ solves }} {% if solves > 1 %}Solves{% else %}Solves{% endif %}
 							{% endif %}
@@ -114,7 +119,7 @@
 							</div>
 							<div class="col-md-3 form-group key-submit">
 								{% block submit %}
-								<button id="challenge-submit" class="challenge-submit" type="submit">
+								<button id="challenge-submit" class="challenge-submit submit-btn" type="submit">
 									Submit
 								</button>
 								{% endblock %}

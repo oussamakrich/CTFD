@@ -11,7 +11,7 @@
 </div>
 <div class="container mx-auto">
 	<div class="row">
-		<div class="col-md-12 mask-bg">
+		<div class="mx-auto">
 			{% if q and field %}
 			<h5 class="text-muted text-center">
 				Searching for teams with <strong>{{ field }}</strong> matching <strong>{{ q }}</strong>
@@ -20,6 +20,8 @@
 				Page {{ teams.page }} of {{ teams.total }} results
 			</h6>
 			{% endif %}
+		</div>
+		<div class="col-md-12 mask-bg">
 
 			{% with form = Forms.teams.PublicTeamSearchForm(field=field, q=q) %}
 			<form method="GET" class="form-inline mask-bg rltv">
