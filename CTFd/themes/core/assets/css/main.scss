@@ -81,10 +81,11 @@ blockquote {
   text-align: center;
 }
 
+.form-control {
+  color: #fff !important;
+}
+
 .form-control:focus {
-  background-color: transparent;
-  border-color: #a3d39c;
-  box-shadow: 0 0 0 0.1rem #a3d39c;
   transition: background-color 0.3s, border-color 0.3s;
 }
 
@@ -188,11 +189,16 @@ blockquote {
   font-weight: 500;
   font-size: 20px;
 }
-
-.container .pad .nav-item{
-  padding-left: 100px;
-
+.form-control:focus, .input-filled-valid {
+  background-color: rgba(80,1,4,.86);
+  border: 1px solid red;
+  box-shadow: unset;
 }
+.container .pad .nav-item{
+  padding: 0 20px;
+  a {font-weight: bold;}
+}
+
 
 .black-font {
   color: #010101;
@@ -228,8 +234,8 @@ blockquote {
 
 
 #base-navbars{
-  display: flex !important;
-  justify-content: space-between;
+  // display: flex;
+  // justify-content: space-between;
 }
 
 @media (min-width: 1200px) {
@@ -238,41 +244,36 @@ blockquote {
   }
 }
 
-// .submit-btn {
-//   height: 50px;
-//   background: black;
-//   color: white;
-//   // clip-path: polygon(0% 10%, 10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%);
-
-
 .submit-btn {
-  // width: 400px;
-  padding: 0px 15px;
-  border: 0;
-
   background: black;
   color: white;
-  height: 40px;
-  background-color: rgb(255, 0, 0, 0.5);
-  position: relative;
+  width: 100px;
+  height: 50px;
+  // clip-path: polygon(0% 10%, 10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%);
 }
-.submit-btn:before {
-  content: '';
-  // width: 398px;
-  height: 48px;
-  background: rgba(90, 0, 0, 0.4);
-  display: block;
-  position: absolute;
-  top: 1px;
-  left: 1px;
-}
-.submit-btn, .submit-btn:before {
-  outline: 0;
-  border: 0;
-  clip-path: polygon(0% 10%, 10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%);
-}
-
-
 .nav-link:hover{
   color: red !important;
+}
+
+.nav-link span:hover {
+  color: red !important;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+
+.row-reset {
+  margin-top: 0 !important;
+}
+
+
+.bg-red{
+  background-color: red;
+
+}
+
+.br0 {
+  border: none;
 }

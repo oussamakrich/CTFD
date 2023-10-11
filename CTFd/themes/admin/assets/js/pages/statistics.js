@@ -137,8 +137,14 @@ const graph_configs = {
               normal: {
                 label: {
                   show: true,
+                  textStyle: {
+                    fontSize: "14",
+                    fontWeight: "normal",
+                    color: "#fff",
+                  },
                   formatter: function(data) {
-                    return `${data.name} - ${data.value} (${data.percent}%)`;
+                    return `${data.name} x- ${data.value} (${data.percent}%)`;
+                  
                   }
                 },
                 labelLine: {
@@ -151,13 +157,19 @@ const graph_configs = {
                   position: "center",
                   textStyle: {
                     fontSize: "14",
-                    fontWeight: "normal"
+                    fontWeight: "normal",
+                    color: "#fff",
                   }
                 }
               }
             },
             emphasis: {
               label: {
+                textStyle: {
+                  fontSize: "14",
+                  fontWeight: "normal",
+                  color: "#fff",
+                },
                 show: true,
                 fontSize: "30",
                 fontWeight: "bold"
@@ -390,7 +402,7 @@ const graph_configs = {
           },
           {
             type: "slider",
-            fillerColor: "rgba(233, 236, 241, 0.4)",
+            fillerColor: "rgba(233, 236, 241, 0)",
             top: 35,
             height: 20,
             show: true,

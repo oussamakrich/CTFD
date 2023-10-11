@@ -9,12 +9,12 @@
 		<h1>Settings</h1>
 	</div>
 </div>
-<div class="container">
-	<div class="row">
+<div class="container mx-auto">
+	<div class="row bg-join">
 		<div class="col-md-2 offset-md-1">
 			<div class="nav flex-column nav-pills" role="tablist">
-				<a class="nav-link active" id="settings-profile-tab" data-toggle="pill" href="#profile" role="tab">Profile</a>
-				<a class="nav-link" id="settings-tokens-tab" data-toggle="pill" href="#tokens" role="tab">Access Tokens</a>
+				<a class="nav-link active w-color" id="settings-profile-tab" data-toggle="pill" href="#profile" role="tab">Profile</a>
+				<a class="nav-link w-color" id="settings-tokens-tab" data-toggle="pill" href="#tokens" role="tab">Access Tokens</a>
 			</div>
 		</div>
 		<div class="col-md-8">
@@ -26,37 +26,37 @@
 					{% from "macros/forms.html" import render_extra_fields %}
 					<form id="user-profile-form" method="post" accept-charset="utf-8" autocomplete="off" role="form"
 						class="form-horizontal">
-						<div class="form-group">
+						<div class="form-group input-border">
 							<b>{{ form.name.label }}</b>
 							{{ form.name(class="form-control", value=name) }}
 						</div>
-						<div class="form-group">
+						<div class="form-group input-border">
 							<b>{{ form.email.label }}</b>
 							{{ form.email(class="form-control", value=email) }}
 						</div>
 
 						<hr>
 
-						<div class="form-group">
+						<div class="form-group input-border">
 							<b>{{ form.confirm.label }}</b>
 							{{ form.confirm(class="form-control") }}
 						</div>
-						<div class="form-group">
+						<div class="form-group input-border">
 							<b>{{ form.password.label }}</b>
 							{{ form.password(class="form-control") }}
 						</div>
 
 						<hr>
 
-						<div class="form-group">
+						<div class="form-group input-border">
 							<b>{{ form.affiliation.label }}</b>
 							{{ form.affiliation(class="form-control", value=affiliation or "") }}
 						</div>
-						<div class="form-group">
+						<div class="form-group input-border">
 							<b>{{ form.website.label }}</b>
 							{{ form.website(class="form-control", value=website or "") }}
 						</div>
-						<div class="form-group">
+						<div class="form-group input-border">
 							<b>{{ form.country.label }}</b>
 							{{ form.country(class="form-control custom-select", value=country) }}
 						</div>
@@ -69,7 +69,7 @@
 						</div>
 
 						<div class="form-group">
-							{{ form.submit(class="btn btn-md btn-primary btn-outlined float-right") }}
+							{{ form.submit(class="btn btn-md btn-outlined float-right submit-btn") }}
 						</div>
 					</form>
 					{% endwith %}
@@ -77,23 +77,23 @@
 				<div class="tab-pane fade" id="tokens" role="tabpanel">
 					{% with form = Forms.self.TokensForm() %}
 					<form method="POST" id="user-token-form">
-						<div class="form-group">
+						<div class="form-group input-border">
 							<b>{{ form.expiration.label }}</b>
 							{{ form.expiration(class="form-control") }}
 						</div>
-						<div class="form-group">
+						<div class="form-group input-border">
 							<b>{{ form.description.label }}</b>
 							{{ form.description(class="form-control", rows="3") }}
 						</div>
 						<div class="form-group text-right">
-							{{ form.submit(class="btn btn-md btn-primary btn-outlined") }}
+							{{ form.submit(class="btn btn-md submit-btn btn-outlined") }}
 						</div>
 					</form>
 					{% endwith %}
 
 					{% if tokens %}
 					<hr>
-					<h4 class="text-center">Active Tokens</h4>
+					<h4 class="text-center w-color">Active Tokens</h4>
 					<table class="table table-striped">
 						<thead>
 							<tr>

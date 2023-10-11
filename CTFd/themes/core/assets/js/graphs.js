@@ -9,34 +9,48 @@ const graph_configs = {
       let option = {
         title: {
           left: "center",
-          text: "Score over Time"
+          text: "Score over Time",
+          textStyle: {
+            color: '#fff'
+            }
         },
         tooltip: {
           trigger: "axis",
           axisPointer: {
             type: "cross"
-          }
+          },
+          textStyle: {
+            color: '#fff'
+            }
+
         },
         legend: {
           type: "scroll",
           orient: "horizontal",
           align: "left",
           bottom: 0,
-          data: [name]
+          data: [name],
+          textStyle: {
+            color: '#fff'
+            }
         },
         toolbox: {
           feature: {
             saveAsImage: {}
-          }
+          },
         },
         grid: {
-          containLabel: true
+          containLabel: true,
+         
         },
         xAxis: [
           {
             type: "category",
             boundaryGap: false,
-            data: []
+            data: [],
+            textStyle: {
+              color: "#fff"
+            }
           }
         ],
         yAxis: [
@@ -52,7 +66,8 @@ const graph_configs = {
             filterMode: "filter",
             height: 20,
             top: 35,
-            fillerColor: "rgba(233, 236, 241, 0.4)"
+            fillerColor: "rgba(233, 236, 241, 0.4)",
+            
           }
         ],
         series: []
@@ -112,7 +127,10 @@ const graph_configs = {
       let option = {
         title: {
           left: "center",
-          text: "Category Breakdown"
+          text: "Category Breakdown",
+          textStyle: {
+            color: '#fff'
+            }
         },
         tooltip: {
           trigger: "item"
@@ -128,11 +146,17 @@ const graph_configs = {
           orient: "vertical",
           top: "middle",
           right: 0,
-          data: []
+          data: [],
+          textStyle: {
+            color: '#fff'
+            }
         },
         series: [
           {
             name: "Category Breakdown",
+            textStyle: {
+              color: '#fff'
+              },
             type: "pie",
             radius: ["30%", "50%"],
             avoidLabelOverlap: false,
@@ -219,7 +243,10 @@ const graph_configs = {
       let option = {
         title: {
           left: "center",
-          text: "Solve Percentages"
+          text: "Solve Percentages",
+          textStyle: {
+            color: '#fff'
+            }
         },
         tooltip: {
           trigger: "item"
@@ -234,7 +261,10 @@ const graph_configs = {
           orient: "vertical",
           top: "middle",
           right: 0,
-          data: ["Fails", "Solves"]
+          data: ["Fails", "Solves"],
+          textStyle: {
+            color: '#fff'
+            }
         },
         series: [
           {
@@ -244,7 +274,10 @@ const graph_configs = {
             avoidLabelOverlap: false,
             label: {
               show: false,
-              position: "center"
+              position: "center",
+              textStyle: {
+                color: '#fff'
+                }
             },
             itemStyle: {
               normal: {

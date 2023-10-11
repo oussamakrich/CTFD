@@ -9,19 +9,19 @@
 			<h1>Create Team</h1>
 		</div>
 	</div>
-	<div class="container">
+	<div class="container mx-auto">
 		<div class="row">
-			<div class="col-md-6 offset-md-3">
+			<div class="col-md-6 mx-auto bg-join">
 				{% include "components/errors.html" %}
 
 				{% with form = Forms.teams.TeamRegisterForm() %}
 				{% from "macros/forms.html" import render_extra_fields %}
 				<form method="POST">
-					<div class="form-group">
+					<div class="form-group input-border">
 						<b>{{ form.name.label }}</b>
 						{{ form.name(class="form-control") }}
 					</div>
-					<div class="form-group">
+					<div class="form-group input-border">
 						<b>{{ form.password.label }}</b>
 						{{ form.password(class="form-control") }}
 					</div>
@@ -29,9 +29,9 @@
 					{{ render_extra_fields(form.extra) }}
 
 					<div class="row pt-3">
-						<div class="col-md-12">
-							<p>After creating your team, share the team name and password with your teammates so they can join your team.</p>
-							{{ form.submit(class="btn btn-success float-right") }}
+					<p class="text-center" style="color:white;">After creating your team, share the team name and password with your teammates so they can join your team.</p>
+						<div class="d-flex">
+							{{ form.submit(class="btn submit-btn") }}
 						</div>
 					</div>
 					{{ form.nonce() }}
