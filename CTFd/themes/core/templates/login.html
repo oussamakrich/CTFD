@@ -18,8 +18,8 @@
 				</g>
 		</svg>
 		<div class="offset-md-3 mx-auto row-bg2" style="position: absolute;z-index:1;padding-left:52px;">
-			{% include "components/errors.html" %}
 			
+			{% include "components/errors.html" %}
 			{% if integrations.mlc() %}
 			<a class="btn btn-secondary btn-lg btn-block" href="{{ url_for('auth.oauth_login') }}">
 				Login with Major League Cyber

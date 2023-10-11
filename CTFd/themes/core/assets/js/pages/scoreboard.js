@@ -47,7 +47,10 @@ const buildGraphData = () => {
     const option = {
       title: {
         left: "center",
-        text: "Top 10 " + (CTFd.config.userMode === "teams" ? "Teams" : "Users")
+        text: "Top 10 " + (CTFd.config.userMode === "teams" ? "Teams" : "Users"),
+        textStyle: {
+          color: '#fff'
+      }
       },
       tooltip: {
         trigger: "axis",
