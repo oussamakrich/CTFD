@@ -11,13 +11,14 @@
 	</div>
 </div> -->
 <div class="container mx-auto">
-	<div class="row mx-auto j-center">
-		<svg class="svg-path" width="802" height="702" style="position: relative; z-index: 2; top: 0;left: 0;stroke: red;stroke-width: 1px;fill: none; pointer-events: none;">
+	<div class="row mx-auto j-center flex-row min-h-800 rltv">
+		<svg class="svg-path" width="802" height="702" style="stroke: red;stroke-width: 1px;fill: none; pointer-events: none; backdrop-filter: blur(16px);">
 			<g transform="translate(1, 1)">
 				<path d="M0 30 ,24 0, 800 0, 800 700, 800 700 , 0 700z" fill="none" />	
+				<path d="M0 30 ,24 0, 800 0, 800 700, 800 700 , 0 700z" fill="#5212137f" />	
 				</g>
 		</svg>
-		<div class="offset-md-3 mx-auto row-bg2" style="position: absolute;z-index:1;padding-left:52px;">
+		<div class="offset-md-3 mx-auto z-2  absolute" >
 			
 			{% include "components/errors.html" %}
 			{% if integrations.mlc() %}

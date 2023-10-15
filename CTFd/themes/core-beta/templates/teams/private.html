@@ -3,7 +3,7 @@
 {% block content %}
   <div id="team-edit-modal" class="modal fade">
     <div class="modal-dialog modal-lg">
-      <div class="modal-content">
+      <div class="dark-modal modal-content">
         <div class="modal-header">
           <h2 class="modal-action text-center w-100">{% trans %}Edit Team{% endtrans %}</h2>
           <button type="button" class="cursor-pointer btn-close" data-bs-dismiss="modal" aria-label="Close">
@@ -13,7 +13,7 @@
         <div class="modal-body clearfix" x-data="TeamEditModal">
           {% with form = Forms.teams.TeamSettingsForm(obj=team) %}
             {% from "macros/forms.html" import render_extra_fields %}
-            <form id="team-info-form" method="POST" @submit.prevent="updateProfile()">
+            <form id="team-info-form" class="input-border" method="POST" @submit.prevent="updateProfile()">
 
               <div class="mb-2">
                 <b>{{ form.name.label(clas="mb-2") }}</b>
