@@ -1,8 +1,10 @@
 <div class="modal-dialog" role="document">
 		<canvas id="challenge-canvas"></canvas>
 		<script>
-			function draw() {
+			setTimeout(function(){
+				const box = document.getElementById('challenge-box');
 				const canvas = document.getElementById('challenge-canvas');
+			function draw() {
 				if (!canvas) {
 					return;
 				}
@@ -15,8 +17,6 @@
 					return [p[0] * w / 100, p[1] * h / 100];
 				});
 				const ctx = canvas.getContext('2d');
-				ctx.imageSmoothingEnabled = true;
-				ctx.imageSmoothingQuality = 'high';
 				ctx.reset();
 
 				canvas.width =  w+2;
@@ -36,8 +36,13 @@
 				ctx.stroke();
 				ctx.fill();
 			}
-			window.addEventListener('resize', draw);
-			setTimeout(draw, 200);
+
+				window.addEventListener('resize', draw);
+				setTimeout(draw, 200);
+				box.addEventListener('click', function(){
+					setTimeout(draw, 200);
+				});
+			}, 100);
 		</script>
 	<div id="challenge-box" class="modal-content polygon1" style="position: absolute;z-index: 1; transform: scale(0.98,0.98);">
 		<div class="modal-body">
