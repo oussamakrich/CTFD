@@ -1,6 +1,6 @@
 {% macro render_extra_fields(fields, show_labels=True, show_optionals=True, show_descriptions=True) -%}
     {% for field in fields %}
-    <div class="form-group">
+    <div class="form-group input-border">
         {% if field.field_type == "text" %}
             {% if show_labels %}
                 <b>{{ field.label }}</b>

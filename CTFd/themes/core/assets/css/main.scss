@@ -168,6 +168,7 @@ body.regular {
   background-repeat: no-repeat;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.753)),
     url("../img/background.svg");
+  background-attachment: fixed;
   background-size: cover;
   background-position: center center;
 }
